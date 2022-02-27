@@ -1,0 +1,25 @@
+{{#if newUser}}
+    <h2>Welcome {{newUser.userName}} to the time registration application</h2>
+    <p class="body-paragraph">Choose which action you would like to take</p>
+    <div class="body-div">
+        <ul>
+            <a href="/time-registration/{{newUser.id}}">Time Registration Tab</a>
+        </ul>
+        <ul>
+            <a href="/time-report">Time Report Tab</a>
+        </ul>
+    </div>
+{{else}}
+    <h2>I don't recognize you. Please provide your name.</h2>
+    <form class="body-form" action="/" method="POST">
+        <label class='body-paragraph'>
+            <p>Add User Name</p>
+            <input name="userName" type="text" placeholder="User name...">
+        </label>
+
+        <button class="btn-start">Add</button>
+    </form>
+
+{{/if}}
+
+
