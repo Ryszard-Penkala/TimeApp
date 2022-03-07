@@ -6,7 +6,6 @@ import {static as eStatic, urlencoded} from "express";
 import {engine} from "express-handlebars";
 import {handleError} from "./utils/error";
 import './utils/db';
-
 import {handlebarsHelpers} from "./utils/handlebars-helpers";
 import {homeRouter} from "./routers/home";
 import {timeRegistrationRouter} from "./routers/time-registration";
@@ -15,6 +14,7 @@ import {timeReportRouter} from "./routers/time-report";
 
 const app = express();
 const port = process.env.PORT || 3000 ;
+const PATH = 'https://nodejs-cleardb-time-app.herokuapp.com'
 
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({
@@ -33,9 +33,9 @@ app.set('view engine', '.hbs');
 
 
 
-app.use('/', homeRouter);
-app.use('/time-registration', timeRegistrationRouter);
-app.use('/time-report', timeReportRouter);
+app.use(`${PATH}/`, homeRouter);
+app.use(`${PATH}/time-registration`, timeRegistrationRouter);
+app.use(`${PATH}/time-report`, timeReportRouter);
 
 app.use(handleError);
 
