@@ -40,5 +40,5 @@ app.use('/time-report', timeReportRouter);
 app.use(handleError);
 
 app.listen(port, ()=>{
-    console.log('Listening on http://localhost:3000')
-})
+    console.log(`Listening on port ${port}`)
+});
