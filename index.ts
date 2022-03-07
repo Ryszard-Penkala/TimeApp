@@ -14,6 +14,7 @@ import {timeReportRouter} from "./routers/time-report";
 
 
 const app = express();
+const port = process.env.PORT || 3000 ;
 
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({
@@ -38,6 +39,6 @@ app.use('/time-report', timeReportRouter);
 
 app.use(handleError);
 
-app.listen(3000, 'localhost', ()=>{
+app.listen(port, ()=>{
     console.log('Listening on http://localhost:3000')
 })
