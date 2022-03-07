@@ -10,11 +10,11 @@ import {handlebarsHelpers} from "./utils/handlebars-helpers";
 import {homeRouter} from "./routers/home";
 import {timeRegistrationRouter} from "./routers/time-registration";
 import {timeReportRouter} from "./routers/time-report";
+import {PATH} from "./utils/path";
 
 
 const app = express();
 const port = process.env.PORT || 3000 ;
-const PATH = 'https://nodejs-cleardb-time-app.herokuapp.com'
 
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({
