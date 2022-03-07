@@ -3,10 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "node index.ts",
-    "start-tsnode": "ts-node index.ts",
+    "start": "ts-node index.ts",
     "start:dev": "tsnd index.ts"
   },
   "keywords": [],
