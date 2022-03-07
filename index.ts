@@ -13,7 +13,7 @@ import {timeReportRouter} from "./routers/time-report";
 
 
 const app = express();
-const port = process.env.PORT || 3000 ;
+const PORT = process.env.PORT || 3000 ;
 
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({
@@ -38,6 +38,6 @@ app.use('/time-report', timeReportRouter);
 
 app.use(handleError);
 
-app.listen(port, ()=>{
-    console.log(`Listening on port ${port}`)
+app.listen(PORT, ()=>{
+    console.log(`Listening on port ${PORT}`)
 });
