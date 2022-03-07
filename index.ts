@@ -10,7 +10,6 @@ import {handlebarsHelpers} from "./utils/handlebars-helpers";
 import {homeRouter} from "./routers/home";
 import {timeRegistrationRouter} from "./routers/time-registration";
 import {timeReportRouter} from "./routers/time-report";
-import {PATH} from "./utils/path";
 
 
 const app = express();
@@ -33,9 +32,9 @@ app.set('view engine', '.hbs');
 
 
 
-app.use(`${PATH}/`, homeRouter);
-app.use(`${PATH}/time-registration`, timeRegistrationRouter);
-app.use(`${PATH}/time-report`, timeReportRouter);
+app.use('/', homeRouter);
+app.use('/time-registration', timeRegistrationRouter);
+app.use('/time-report', timeReportRouter);
 
 app.use(handleError);
 

@@ -1,1 +1,0 @@
-export const PATH = 'https://nodejs-cleardb-time-app.herokuapp.com'

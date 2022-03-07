@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node index.ts",
     "start-tsnode": "ts-node index.ts",
     "start:dev": "tsnd index.ts"
   },
