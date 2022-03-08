@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines": { "node": "16.9.1" },
+  "engines": {
+    "node": "16.9.1"
+  },
   "scripts": {
     "start": "node dist/index.js",
     "postinstall": "tsc",
@@ -20,6 +22,7 @@
     "express-handlebars": "^6.0.2",
     "method-override": "^3.0.0",
     "mysql2": "^2.3.3",
+    "tsc": "^2.0.4",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
