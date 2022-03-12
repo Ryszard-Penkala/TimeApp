@@ -1,0 +1,137 @@
+:root {
+    --primary-color: #005BBB;
+    --seconadry-color: #99683e;
+}
+
+*, *::before, *::after{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+body{
+    height: 100vh;
+}
+
+ .header-container{
+     display: flex;
+     padding: 50px;
+     align-items: center;
+     justify-content: center;
+     background-color: var(--primary-color);
+     flex-direction: column;
+     border-bottom: 5px solid black;
+ }
+
+ .main-header-ul{
+     margin: 50px 0 0 0;
+     display: inline-block;
+     background-color: var(--seconadry-color);
+     padding: 15px 20px;
+     border: 2px solid black;
+     border-radius: 20px;
+ }
+
+ .main-header-ul a {
+     text-decoration: none;
+     color: black;
+     font-size: 20px;
+ }
+
+ .error{
+     width: 50vw;
+     height: 20vh;
+     margin: 50px auto;
+     background-color: red;
+     border: 5px solid black;
+     font-size: 20px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     align-items: center;
+
+ }
+
+ .error p {
+     font-size: 22px;
+ }
+
+ .main-section{
+     width: 100vw;
+     background-color: var(--seconadry-color);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     height: 100%;
+     padding-bottom: 25%;
+ }
+
+.body-paragraph{
+    font-size: 22px;
+    margin: 15px;
+}
+
+.body-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.body-div ul{
+    display: block;
+    background-color: var(--primary-color);
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    margin: 20px 50px;
+    padding: 30px 50px;
+    border: 3px solid black;
+    border-radius: 25px;
+}
+
+.body-div ul a{
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}
+
+.btn-start,
+.btn-stop{
+    display: block;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin: 20px 50px;
+    padding: 30px 50px;
+    border: 3px solid black;
+    border-radius: 25px;
+}
+.btn-start{
+    background-color: forestgreen;
+}
+
+.btn-stop{
+    background-color: red;
+}
+
+.body-form{
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.body-form p{
+    padding: 15px 100px;
+}
+
+.body-form input{
+    padding:10px;
+    margin:10px 0;
+    border: 2px solid #eee;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+    border-radius:10px;
+    width:100%;
+}

@@ -1,0 +1,22 @@
+<h2>Welcome to the time registration TAB</h2>
+
+{{#if taskCookieParsed}}
+    <p class='body-paragraph'>Please click 'Stop task' to stop counting time of your current task. </p>
+    <form action="/time-registration/{{userId}}" method="POST">
+        <p class='body-paragraph'>Task: {{taskCookieParsed.taskDescription}} is in progress.</p>
+        <p class='body-paragraph'>Started at: {{taskCookieParsed.startedAt}}</p>
+        <button class="btn-stop">Stop task</button>
+    </form>
+
+{{else}}
+    <p class='body-paragraph'>Please click 'Start task' to start counting time of your actual task. Remember to add task description. </p>
+    <form class="body-form" action="/time-registration/{{userId}}" method="POST">
+        <label class='body-paragraph'>
+            <p>Add description of your task.</p>
+            <input name="taskDescription" type="text" placeholder="Task description...">
+        </label>
+
+        <button class="btn-start">Start task</button>
+    </form>
+{{/if}}
+
